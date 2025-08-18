@@ -1,0 +1,116 @@
+/* General body */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #fafafa;
+  color: #333;
+}
+
+/* Header & nav */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+header h1 a {
+  text-decoration: none;
+  color: #111;
+}
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #555;
+}
+nav a:hover {
+  color: #000;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #888;
+}
+
+/* Posts grid */
+.posts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.post-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.post-card h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+.post-card h2 a {
+  text-decoration: none;
+  color: #111;
+}
+.post-card p {
+  color: #555;
+}
+.post-meta {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 10px;
+}
+
+/* Post form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form input, form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+form button {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  background: #111;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+form button:hover {
+  background: #333;
+}
+
+/* Single post */
+#post-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+#post-container h2 {
+  font-size: 2rem;
+}
+#post-container p {
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+}
