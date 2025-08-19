@@ -1,10 +1,29 @@
-/* General body */
+/* General body - Light Mode */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 20px;
   background: #fafafa;
   color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+/* Dark Mode */
+body.dark {
+  background: #121212;
+  color: #e5e5e5;
+}
+
+body.dark header h1 a,
+body.dark nav a {
+  color: #e5e5e5;
+}
+
+body.dark nav a:hover {
+  color: #fff;
+}
+
+body.dark footer {
+  color: #aaa;
 }
 
 /* Header & nav */
@@ -45,7 +64,14 @@ footer {
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: background 0.3s, color 0.3s;
 }
+
+body.dark .post-card {
+  background: #1e1e1e;
+  color: #ddd;
+}
+
 .post-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -73,13 +99,25 @@ form {
   flex-direction: column;
   gap: 10px;
 }
+
 form input, form textarea {
   padding: 12px;
   font-size: 16px;
   border-radius: 8px;
   border: 1px solid #ccc;
   resize: vertical;
+  background: #2a2a2a;
+  color: #eee;
+  border: 1px solid #444;
 }
+
+body.dark form input,
+body.dark form textarea {
+  background: #2a2a2a;
+  color: #eee;
+  border: 1px solid #444;
+}
+
 form button {
   padding: 12px;
   font-size: 16px;
@@ -89,6 +127,11 @@ form button {
   border-radius: 8px;
   cursor: pointer;
 }
+
+body.dark form button {
+  background: #333;
+}
+
 form button:hover {
   background: #333;
 }
@@ -99,10 +142,18 @@ form button:hover {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background 0.3s, color 0.3s;
 }
+
+body.dark #post-container {
+  background: #1e1e1e;
+  color: #ddd;
+}
+
 #post-container h2 {
   font-size: 2rem;
 }
+
 #post-container p {
   line-height: 1.6;
   margin-top: 20px;

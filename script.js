@@ -72,3 +72,25 @@ if (postContainer) {
   }
   loadPost();
 }
+
+// Dark Mode Toggle
+const toggleBtn = document.getElementById("dark-toggle");
+if (toggleBtn) {
+  //Load saved prefernce
+  if (localStorage.getItem("darkMode") === "enabled") {
+    document.body.classListy.add("dark");
+    toggleBtn.textContent = "☀️";
+  }
+
+
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("darkMode", "enabled");
+      toggleBtn.textContent = "☀️";
+    } else {
+      localStorage.setItem("darkMode", "disabled");
+      toggleBtn.textContent = "🌙";
+    }
+  });
+}
